@@ -33,6 +33,25 @@
         "title": "转换"
       }
     ],
+    "keybindings": [
+        {
+            "command": "easy-kuai.switch",
+            "key": "alt+k",
+            "mac": "cmd+k"
+        },
+        {
+            "command": "easy-kuai.CN2EN",
+            "key": "alt+;",
+            "mac": "cmd+;",
+            "when": "easy-kuai.isOpen"
+        },
+        {
+            "command": "easy-kuai.EN2CN",
+            "key": "shift+alt+;",
+            "mac": "shift+cmd+;",
+            "when": "easy-kuai.isOpen"
+        }
+    ],
     "submenus": [
       {
         "id": "easy-kuai.menulist",
@@ -42,12 +61,10 @@
     "menus": {
       "easy-kuai.menulist": [
         {
-          "command": "easy-kuai.CN2EN",
-          "group": "2_workspace"
+          "command": "easy-kuai.CN2EN"
         },
         {
-          "command": "easy-kuai.EN2CN",
-          "group": "2_workspace"
+          "command": "easy-kuai.EN2CN"
         }
       ],
       "editor/context": [
