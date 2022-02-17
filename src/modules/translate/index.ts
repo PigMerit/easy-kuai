@@ -3,7 +3,7 @@ import { LANGUAGE } from './const';
 import { getStatus, setStatus } from '../const';
 import { translateAllSelect, setHoverProvider } from './utils';
 export default function translate(context: vscode.ExtensionContext): vscode.Disposable[] {
-    // 汉译英
+    /* 汉译英 */
     const translate_CN2EN = vscode.commands.registerCommand('easy-kuai.CN2EN', async () => {
         const editor = vscode.window.activeTextEditor as vscode.TextEditor;
         const allSelections = editor.selections;
@@ -18,7 +18,7 @@ export default function translate(context: vscode.ExtensionContext): vscode.Disp
         });
     });
 
-    // 英译汉
+    /* 英译汉 */
     let hoverProviderDisposable: vscode.Disposable | undefined;
     const translate_EN2CN = vscode.commands.registerCommand('easy-kuai.EN2CN', () => {
         const status = getStatus('translate-en2cn');
@@ -30,6 +30,13 @@ export default function translate(context: vscode.ExtensionContext): vscode.Disp
         setStatus('translate-en2cn', !status);
     });
 
+    // 返回出来的具有关闭英译汉功能的函数
+    const translate_Hover = {
+        dispose: () => {
+            hoverProviderDisposable?.dispose();
+        },
+    };
+
     context.subscriptions.push(translate_CN2EN, translate_EN2CN);
-    return hoverProviderDisposable ? [hoverProviderDisposable, translate_CN2EN, translate_EN2CN] : [ translate_CN2EN, translate_EN2CN];
+    return [translate_Hover, translate_CN2EN, translate_EN2CN];
 }
