@@ -177,14 +177,14 @@ export const insertComponentsCode = (document: vscode.TextDocument, item: vscode
             item.additionalTextEdits.push(
                 vscode.TextEdit.insert(
                     new vscode.Position(namePosition[0].lineIdx + 1, 0),
-                    `components: {${insertText}}`,
+                    `components: {${insertText}},`,
                 ),
             );
         } else if (decoratorPosition.length > 0) {
             item.additionalTextEdits.push(
                 vscode.TextEdit.insert(
                     new vscode.Position(decoratorPosition[0].lineIdx + 1, 0),
-                    `components: {${insertText}}`,
+                    `components: {${insertText}},`,
                 ),
             );
         } else {
