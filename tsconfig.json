@@ -1,0 +1,34 @@
+{
+	"compilerOptions": {
+		"module": "esnext",
+		"target": "ES2020",
+		"lib": [
+			"ES2020"
+		],
+		"sourceMap": true,
+		"rootDir": "src",
+		"strict": true,  /* enable all strict type-checking options */
+        "importHelpers": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
+        "noImplicitAny": false,
+        // @typescript-eslint/explicit-module-boundary-types
+		/* Additional Checks */
+		"noImplicitReturns": false, /* Report error when not all code paths in function return a value. */
+		// "noFallthroughCasesInSwitch": true, /* Report errors for fallthrough cases in switch statement. */
+		// "noUnusedParameters": true,  /* Report errors on unused parameters. */
+	},
+     "include": [
+        "**/*.ts",
+        "**/*.d.ts",
+        "**/*.tsx",
+        "**/*.vue",
+      ],
+	"exclude": [
+		"node_modules",
+		".vscode-test"
+	]
+}

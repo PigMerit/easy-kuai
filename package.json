@@ -1,0 +1,101 @@
+{
+  "name": "easy-kuai",
+  "displayName": "easy-kuai",
+  "description": "Helps you write code more easily in kuai-shou",
+  "publisher": "Zephyr",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.54.3"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "easy-kuai.switch",
+        "title": "easy-kuai.switch"
+      },
+      {
+        "command": "easy-kuai.CN2EN",
+        "title": "翻译-汉译英"
+      },
+      {
+        "command": "easy-kuai.EN2CN",
+        "title": "翻译-英译汉"
+      },
+      {
+        "command": "easy-kuai.transform",
+        "title": "转换"
+      }
+    ],
+    "submenus": [
+      {
+        "id": "easy-kuai.menulist",
+        "label": "easy-kuai操作"
+      }
+    ],
+    "menus": {
+      "easy-kuai.menulist": [
+        {
+          "command": "easy-kuai.CN2EN",
+          "group": "2_workspace"
+        },
+        {
+          "command": "easy-kuai.EN2CN",
+          "group": "2_workspace"
+        }
+      ],
+      "editor/context": [
+        {
+          "submenu": "easy-kuai.menulist",
+          "when": "easy-kuai.isOpen",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@ks/eslint-config-ks": "^6.0.0",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.54.3",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "@vscode/test-electron": "^2.0.3",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-vue": "^7.3.0",
+    "glob": "^7.2.0",
+    "mocha": "^9.1.3",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "md5-node": "^1.0.1",
+    "request": "^2.88.2"
+  }
+}
