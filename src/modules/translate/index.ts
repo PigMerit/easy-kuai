@@ -36,7 +36,6 @@ export default function translate(context: vscode.ExtensionContext): vscode.Disp
             hoverProviderDisposable?.dispose();
         },
     };
-
     context.subscriptions.push(translate_CN2EN, translate_EN2CN);
     return [translate_Hover, translate_CN2EN, translate_EN2CN];
 }

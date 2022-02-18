@@ -29,6 +29,14 @@
         "title": "翻译-英译汉"
       },
       {
+        "command": "easy-kuai.css-var",
+        "title": "添加css常量"
+      },
+       {
+        "command": "easy-kuai.css-replace",
+        "title": "css常量替换"
+      },
+      {
         "command": "easy-kuai.transform",
         "title": "转换"
       }
@@ -65,6 +73,9 @@
         },
         {
           "command": "easy-kuai.EN2CN"
+        },
+        {
+        "command": "easy-kuai.css-var"
         }
       ],
       "editor/context": [

@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import kwaiImport from '../modules/kwai-ui-import/index';
 import translate from '../modules/translate/index';
+import cssVariable from '../modules/css-variable/index';
 import { getStatus, setStatus, initStatus } from './const';
 
 
@@ -15,6 +16,7 @@ const openExtension = (context: vscode.ExtensionContext) => {
     opendExtension = [];
     opendExtension.push(...kwaiImport(context));
     opendExtension.push(...translate(context));
+    opendExtension.push(...cssVariable(context));
     vscode.commands.executeCommand('setContext', 'easy-kuai.isOpen', true);
     vscode.window.showInformationMessage('开启easy-kuai插件 希望能帮助到你');
 };

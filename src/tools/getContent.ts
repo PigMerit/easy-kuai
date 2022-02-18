@@ -10,7 +10,6 @@ export const readFile = (filePath:string) => {
 };
 
 export const getContentByReg = (content: string, reg: RegExp) => {
-    console.log(content, reg, '2222222');
     if (!content || !reg) {return [];}
     return [...content.matchAll(reg)];
 };
