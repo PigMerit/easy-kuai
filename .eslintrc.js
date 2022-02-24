@@ -23,9 +23,4 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/no-extra-parens': ['error'],
     },
-    globals: {
-        EASY_ENV_IS_PROD: true,
-        EASY_ENV_IS_NODE: true,
-        EASY_ENV_IS_BROWSER: true,
-    },
 };

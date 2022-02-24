@@ -3,6 +3,7 @@
   "displayName": "easy-kuai",
   "description": "Helps you write code more easily in kuai-shou",
   "publisher": "Zephyr",
+  "repository":"https://github.com/PigMerit/easy-kuai",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.54.3"
