@@ -55,4 +55,3 @@ export const isHasContent = (document: vscode.TextDocument, serchReg: RegExp, se
     return serchContentFormDocument(document, serchReg, searchParams).length > 0;
 };
 // console.log(typeof readFile('./getContent.ts'))
-console.log(__dirname, '__dirname');

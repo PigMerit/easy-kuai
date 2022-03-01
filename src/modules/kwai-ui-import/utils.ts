@@ -145,7 +145,7 @@ export const insertImportCode = (document: vscode.TextDocument, item: vscode.Com
             const col = matchInfo?.info.index as number;
             item.additionalTextEdits.push(
                 vscode.TextEdit.insert(
-                    new vscode.Position(_codeInLine.kuaiUI.start, col - 1), `, ${initLabel}`),
+                    new vscode.Position(_codeInLine.kuaiUI.start, col), `, ${initLabel}`),
             );
         }
     }
@@ -211,7 +211,7 @@ export const insertComponentsCode = (document: vscode.TextDocument, item: vscode
             const col = matchInfo?.info.index as number;
             item.additionalTextEdits.push(
                 vscode.TextEdit.insert(
-                    new vscode.Position(_codeInLine.components.start, col - 1), `, ${insertText}`),
+                    new vscode.Position(_codeInLine.components.start, col), `, ${insertText}`),
             );
         }
     }
