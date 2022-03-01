@@ -1,5 +1,3 @@
-
-
 import * as vscode from 'vscode';
 import { readCssVariable } from './utils';
 import { ICssVariable } from './const';
