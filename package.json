@@ -4,7 +4,7 @@
   "description": "Helps you write code more easily in kuai-shou",
   "publisher": "Zephyr",
   "repository":"https://github.com/PigMerit/easy-kuai",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.54.3"
   },
@@ -33,13 +33,9 @@
         "command": "easy-kuai.css-var",
         "title": "添加css常量"
       },
-       {
+      {
         "command": "easy-kuai.css-replace",
         "title": "css常量替换"
-      },
-      {
-        "command": "easy-kuai.transform",
-        "title": "转换"
       }
     ],
     "keybindings": [

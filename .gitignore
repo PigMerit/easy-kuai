@@ -1,7 +1,7 @@
 node_modules
 /dist
-
 # Editor directories and files
+README.md
 .idea
 .vscode
 *.suo
